@@ -4,7 +4,7 @@
 
 - Masters Software Engineer at Rochester Institute of Technology
 - Prefers minimal, focused code changes
-- Working directory: C:\ajsoftworks\deeplearning-claude
+- Working directory: C:\ajsoftworks\deeplearning-ai
 
 ## Course Information
 

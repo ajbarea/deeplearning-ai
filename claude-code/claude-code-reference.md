@@ -32,7 +32,15 @@
 
 - `/mcp` - Manage MCP servers
 - `/permissions` - View and manage permissions
-- `/install-github-app` - Install GitHub app integration
+
+## GitHub Integration
+
+- `/install-github-app` - Install GitHub Actions workflow for Claude Code
+  - Sets up automated PR creation from issue descriptions
+  - Enables `@claude` mentions in issues/PRs to trigger AI assistance
+  - Requires Anthropic API key as repository secret
+  - Creates workflow file in `.github/workflows/`
+  - Only works after PR is merged and workflow is active
 
 ## Custom Commands
 
