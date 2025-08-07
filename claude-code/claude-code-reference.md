@@ -48,6 +48,51 @@
 - Use `$ARGUMENTS` keyword to allow parameters
 - Access via `/prompt-name`
 
+## Hooks
+
+Claude Code hooks allow you to execute shell commands at specific stages of interaction, providing powerful customization and automation capabilities.
+
+### Configuration
+
+Configure hooks in your settings JSON file:
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command", 
+            "command": "npm run lint"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+### Available Hook Events
+
+- `PreToolUse` - Runs before tool execution
+- `PostToolUse` - Runs after successful tool completion  
+- `UserPromptSubmit` - Runs when user submits a prompt
+- `Notification` - Triggered during system notifications
+- `Stop` - Runs when main agent finishes responding
+- `SubagentStop` - Runs when subagent finishes responding
+
+### Common Use Cases
+
+- Validate code changes with linters/formatters
+- Run tests after file modifications
+- Log interactions for auditing
+- Add custom security checks
+- Implement workflow automation
+
+**Security Note**: Hooks execute shell commands - configure carefully to avoid security risks.
+
 ## Tips & Techniques
 
 - Add `think a lot` to the end of complex tasks to trigger extended thinking and allocate more tokens to the thinking process
