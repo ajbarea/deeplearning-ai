@@ -8,6 +8,8 @@
 - `/compact` - Summarize current conversation and start fresh
 - `/commit` - Create git commit with changes
 - `claude --resume` - Resume from command line with previous conversation context
+- `!<command>` - Execute regular bash commands (example: `!pwd`)
+- `exit` - Quit Claude Code
 
 ## File & Project Management
 
@@ -26,12 +28,16 @@
 - `@` - Reference a specific file or directory
 - `Esc` - Interrupt/cancel command mid-run
 - `Ctrl+C` - Alternative interrupt
+- `Shift+Tab` - Switch between planning and auto-accept mode
 - `Shift+Tab + Shift+Tab` - Enter planning mode
+- `ESC ESC` - Rewind the conversation to an earlier point in time
+- `Win + Shift + S` - Take a screenshot
 
 ## Additional Commands
 
 - `/mcp` - Manage MCP servers
 - `/permissions` - View and manage permissions
+- `/model` - Show and set current model
 
 ## GitHub Integration
 
@@ -95,5 +101,5 @@ Configure hooks in your settings JSON file:
 
 ## Tips & Techniques
 
-- Add `think a lot` to the end of complex tasks to trigger extended thinking and allocate more tokens to the thinking process
+- Add the word "think" to your prompts e.g. `think a lot` to complex tasks to trigger extended thinking and allocate more tokens to the thinking process
 - Use parallel subagents for brainstorming: `use two parallel subagents to brainstorm possible plans. do not implement code` - generates multiple plans in parallel
