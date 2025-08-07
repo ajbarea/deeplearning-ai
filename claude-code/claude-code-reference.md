@@ -7,6 +7,7 @@
 - `/clear` - Clear conversation and start from scratch
 - `/compact` - Summarize current conversation and start fresh
 - `/commit` - Create git commit with changes
+- `claude --resume` - Resume from command line with previous conversation context
 
 ## File & Project Management
 
@@ -14,9 +15,32 @@
 - `/resume` - Resume previous conversation
 - `/edit` - Edit files interactively
 
+## MCP Management
+
+- `claude mcp add` - Add MCP server to configuration
+  - Example: `claude mcp add playwright npx @playwright/mcp@latest`
+
 ## Keyboard Shortcuts
 
 - `#` - Add prompt to CLAUDE.md options
 - `@` - Reference a specific file or directory
 - `Esc` - Interrupt/cancel command mid-run
 - `Ctrl+C` - Alternative interrupt
+- `Shift+Tab + Shift+Tab` - Enter planning mode
+
+## Additional Commands
+
+- `/mcp` - Manage MCP servers
+- `/permissions` - View and manage permissions
+- `/install-github-app` - Install GitHub app integration
+
+## Custom Commands
+
+- Create custom commands by adding `.claude/commands/prompt-name.md`
+- Use `$ARGUMENTS` keyword to allow parameters
+- Access via `/prompt-name`
+
+## Tips & Techniques
+
+- Add `think a lot` to the end of complex tasks to trigger extended thinking and allocate more tokens to the thinking process
+- Use parallel subagents for brainstorming: `use two parallel subagents to brainstorm possible plans. do not implement code` - generates multiple plans in parallel
