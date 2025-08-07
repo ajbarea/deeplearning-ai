@@ -7,7 +7,8 @@
       "Bash(rm:*)",
       "WebFetch(domain:support.microsoft.com)",
       "Bash(git add:*)",
-      "Bash(Test-Path \"C:\\Users\\ajbar\\ajsoftworks\\deeplearning-ai\\notify-hook.ps1\")"
+      "Bash(Test-Path \"C:\\Users\\ajbar\\ajsoftworks\\deeplearning-ai\\notify-hook.ps1\")",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
